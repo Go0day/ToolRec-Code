@@ -1,0 +1,9 @@
+model: FM
+learning_rate: 0.1
+topk: [5, 20]
+eval_args: 
+  split: {'LS': 'valid_and_test'}
+  mode:
+    valid: uni100
+    test: full
+  order: TO
