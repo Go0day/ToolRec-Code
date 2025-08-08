@@ -1,0 +1,22 @@
+load_col:
+    inter: ['user_id', 'item_id', 'rating', "timestamp"]
+    item: ['item_id', 'name', 'postal_code', "city", "stars", "categories"]
+stopping_step: 20
+checkpoint_dir: ./dataset/saved_file
+loss_type: 'BPR'
+data_path: ./dataset
+bert_usage: True
+glove_path: ./dataset/glove/glove.6B.100d.txt
+word_embedding: True
+pretrained_name: /XXX
+load_pretrain: True
+freeze_Rec_Params: True
+adapter_prefix_usage: True
+item_additional_feature: categories
+side_feature_size: 32   # 100 / 768
+
+item_additional_usage: True
+item_transformer_layer: 1  
+item_transformer_mode: 1  
+
+freeze_side_feature: True

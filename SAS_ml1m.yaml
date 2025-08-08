@@ -1,0 +1,25 @@
+load_col:
+    inter: ['user_id', 'item_id', 'rating', "timestamp"]
+    user: ['user_id', 'age', 'gender', 'occupation', 'zip_code']
+    item: ['item_id', 'release_year', "genre", "movie_title"]
+stopping_step: 20
+
+checkpoint_dir: ./dataset/saved_file
+loss_type: 'BPR'
+data_path: ./dataset
+
+pretrained_name: /XXX
+
+bert_usage: True
+glove_path: ./dataset/glove/glove.6B.100d.txt
+word_embedding: True
+item_additional_feature: genre
+side_feature_size: 100  
+
+item_additional_usage: True
+item_transformer_layer: 1   
+item_transformer_mode: 3   
+
+freeze_side_feature: True
+
+gpu_id: 2

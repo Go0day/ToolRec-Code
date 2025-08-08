@@ -1,0 +1,21 @@
+load_col:
+    inter: ['user_id', 'item_id', 'rating', "timestamp"]
+    item: ['item_id', 'title', "price", "sales_rank"]
+stopping_step: 20
+checkpoint_dir: ./dataset/saved_file
+pretrained_name: /XXX
+load_pretrain: True
+freeze_Rec_Params: True
+adapter_prefix_usage: True
+loss_type: 'BPR'
+data_path: ./dataset
+item_additional_feature: price
+item_additional_usage: True
+bert_usage: False
+glove_path: ./dataset/glove/glove.6B.100d.txt
+word_embedding: True
+side_feature_size: 32
+item_transformer_layer: 1   
+item_transformer_mode: 3    
+
+freeze_side_feature: True
